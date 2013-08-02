@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/etc/netctl/examples'
+let g:netrw_dirhist_2='/home/robin/vid'
+let g:netrw_dirhist_3='/home/robin/github'
