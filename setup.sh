@@ -6,5 +6,5 @@ files=('vimrc' 'vim')
 
 for i in "${files[@]}"; do
    rm -r ~/.$i
-   ln -s $PWD/$i ~/.$i
+   ln -s "$PWD/$i" ~/."$i"
 done
