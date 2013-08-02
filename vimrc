@@ -3,16 +3,23 @@ set autoread
 set nocompatible
 set wrapscan
 set mouse=a
-colorscheme jellybeans
-syntax on
-filetype plugin indent on
-set modelines=5
+
+" Bundle
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'godlygeek/tabular'
+Bundle 'bling/vim-airline'
+Bundle 'nanotech/jellybeans.vim'
 
 " Encoding
 scriptencoding utf-8
 set encoding=utf-8
 
 " Display
+syntax on
+colorscheme jellybeans
+set modelines=5
 set title
 set wrap
 set linebreak
@@ -23,6 +30,7 @@ set scrolloff=5
 set colorcolumn=80
 
 " Indentation
+filetype plugin indent on
 set autoindent
 set smartindent
 set smarttab
@@ -59,26 +67,17 @@ au BufRead /tmp/mutt-* setlocal spell spelllang=en_us
 " Folding
 if has ('folding')
   set foldenable
-  set foldmethod=marker
-  set foldmarker={{{,}}}
+  set foldmethod=syntax
+  "set foldmethod=marker
+  "set foldmarker={{{,}}}
   set foldcolumn=0
 endif
 
 " Commands
-
-" Copy and paste
-set pastetoggle=<F5>
-" Word count
-nmap <silent> <F2> g<C-g>
-
-" Redraw and clear hlsearch.
-nnoremap <silent> <C-l> :noh<CR><C-l>
-
-" camelCase
-nmap  <F3> :%s/_\([a-z]\)/\u\1/gc
-
-" Notes to self
+set pastetoggle=<F5>                  " Copy and paste
+nmap <silent> <F2> g<C-g>             " Word count
+nnoremap <silent> <C-l> :noh<CR><C-l> " Redraw and clear hlsearch.
+nmap  <F3> :%s/_\([a-z]\)/\u\1/gc     " camelCase
 " :retab - fix all old tabs/space errors
-"
 " ^Y scroll buffer up
 " ^E scroll buffer down
