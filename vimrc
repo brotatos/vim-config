@@ -1,4 +1,5 @@
 " Generic
+set path=$PWD
 set autoread
 set nocompatible
 set wrapscan
@@ -10,6 +11,7 @@ call vundle#rc()
 
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
+Bundle 'marczych/vim-lose'
 Bundle 'nanotech/jellybeans.vim'
 
 " Encoding
