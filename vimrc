@@ -30,6 +30,7 @@ set visualbell
 set laststatus=2
 set scrolloff=5
 set colorcolumn=80
+set tw=79
 
 " Indentation
 filetype plugin indent on
@@ -37,7 +38,6 @@ set autoindent
 set smartindent
 set smarttab
 set expandtab
-set tw=79
 set shiftwidth=3
 set softtabstop=3
 set tabstop=3
