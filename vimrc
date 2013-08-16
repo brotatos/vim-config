@@ -9,6 +9,8 @@ set mouse=a
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'marczych/vim-lose'
