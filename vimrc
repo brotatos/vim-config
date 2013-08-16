@@ -83,3 +83,4 @@ nmap  <F3> :%s/_\([a-z]\)/\u\1/gc     " camelCase
 " :retab - fix all old tabs/space errors
 " ^Y scroll buffer up
 " ^E scroll buffer down
+" :sh to go to shell; ^D to go back
