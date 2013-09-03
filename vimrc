@@ -15,7 +15,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
-Bundle 'marczych/vim-lose'
 Bundle 'nanotech/jellybeans.vim'
 
 " Encoding
