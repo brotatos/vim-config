@@ -11,6 +11,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
