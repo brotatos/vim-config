@@ -16,6 +16,9 @@ Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'nanotech/jellybeans.vim'
 
+" Plugin specific settings
+let g:ctrlp_use_caching = 1
+
 " Encoding
 scriptencoding utf-8
 set encoding=utf-8
