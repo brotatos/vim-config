@@ -1,5 +1,4 @@
 " Generic
-set path=$PWD
 set autoread
 set nocompatible
 set wrapscan
