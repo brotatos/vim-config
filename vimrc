@@ -10,6 +10,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'elzr/vim-json'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
