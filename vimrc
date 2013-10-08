@@ -1,5 +1,4 @@
 " Generic
-set path=$PWD
 set autoread
 set nocompatible
 set wrapscan
@@ -11,11 +10,15 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'elzr/vim-json'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'nanotech/jellybeans.vim'
+
+" Plugin specific settings
+let g:ctrlp_use_caching = 1
 
 " Encoding
 scriptencoding utf-8
