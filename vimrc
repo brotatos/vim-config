@@ -11,6 +11,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'dag/vim-fish'
 Bundle 'elzr/vim-json'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
