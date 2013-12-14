@@ -8,6 +8,7 @@ set mouse=a
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+
 Bundle 'gmarik/vundle'
 
 Bundle 'elzr/vim-json'
