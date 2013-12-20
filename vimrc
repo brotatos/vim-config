@@ -11,13 +11,13 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'dag/vim-fish'
 Bundle 'elzr/vim-json'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
+Bundle 'nanotech/jellybeans.vim'
 
 " Plugin specific settings
 let g:ctrlp_use_caching = 1
@@ -28,9 +28,7 @@ set encoding=utf-8
 
 " Display
 syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme jellybeans
 set modelines=5
 set title
 set wrap
