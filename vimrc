@@ -27,7 +27,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 " Display
-syntax on
+syntax enable
 colorscheme jellybeans
 set modelines=5
 set title
