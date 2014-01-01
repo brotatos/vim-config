@@ -1,3 +1,3 @@
-set tabstop=2
-set softtabstop=2
-set tw=79
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal tw=79
