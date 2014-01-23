@@ -12,7 +12,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'dag/vim-fish'
-Bundle 'elzr/vim-json'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
@@ -29,6 +28,7 @@ set encoding=utf-8
 " Display
 syntax enable
 colorscheme jellybeans
+set background=dark
 set modelines=5
 set title
 set wrap
