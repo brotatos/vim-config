@@ -1,3 +1,4 @@
+set guifont=Monospace\ 9
 " Generic
 set autoread
 set nocompatible
