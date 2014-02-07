@@ -29,7 +29,6 @@ set encoding=utf-8
 " Display
 syntax enable
 colorscheme jellybeans
-set background=dark
 set modelines=5
 set title
 set wrap
