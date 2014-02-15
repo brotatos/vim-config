@@ -11,6 +11,7 @@ call vundle#rc()
 
 
 Bundle 'gmarik/vundle'
+Bundle 'endel/vim-github-colorscheme'
 
 Bundle 'dag/vim-fish'
 Bundle 'kien/ctrlp.vim'
