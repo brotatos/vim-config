@@ -9,10 +9,7 @@ set mouse=a
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-
 Bundle 'gmarik/vundle'
-Bundle 'endel/vim-github-colorscheme'
-
 Bundle 'dag/vim-fish'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
