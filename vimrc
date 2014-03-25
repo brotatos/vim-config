@@ -26,6 +26,7 @@ set encoding=utf-8
 
 " Display
 syntax enable
+set background=dark
 colorscheme jellybeans
 set modelines=5
 set title
