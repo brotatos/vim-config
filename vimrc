@@ -1,3 +1,7 @@
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
 set guifont=Monospace\ 9
 " Generic
 set autoread
