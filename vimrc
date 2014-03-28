@@ -20,7 +20,7 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Plugin specific settings
 let g:ctrlp_use_caching = 1
-let g:hybrid_use_Xresources = 1
+"let g:hybrid_use_Xresources = 1
 
 " Encoding
 scriptencoding utf-8
@@ -29,7 +29,7 @@ set encoding=utf-8
 " Display
 syntax enable
 set background=dark
-colorscheme hybrid
+colorscheme jellybeans
 set modelines=5
 set title
 set wrap
