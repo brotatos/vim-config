@@ -14,6 +14,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'dag/vim-fish'
 Bundle 'kien/ctrlp.vim'
