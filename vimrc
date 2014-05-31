@@ -33,6 +33,7 @@ set encoding=utf-8
 
 " Display
 syntax enable
+set t_Co=256
 set background=dark
 colorscheme jellybeans
 set modelines=5
