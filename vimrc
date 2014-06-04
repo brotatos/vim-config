@@ -76,20 +76,6 @@ set hlsearch
 set smartcase
 set incsearch
 
-" Mutt
-au BufRead /tmp/mutt-* set tw=72
-au BufRead /tmp/mutt-* set nohlsearch
-au BufRead /tmp/mutt-* setlocal spell spelllang=en_us
-
-" Folding
-if has ('folding')
-  set foldenable
-  set foldmethod=syntax
-  "set foldmethod=marker
-  "set foldmarker={{{,}}}
-  set foldcolumn=0
-endif
-
 " Commands
 set pastetoggle=<F5>                  " Copy and paste
 nmap <silent> <F2> g<C-g>             " Word count
