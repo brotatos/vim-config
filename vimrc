@@ -13,6 +13,7 @@ set mouse=a
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'python.vim'
 Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'w0ng/vim-hybrid'
@@ -50,7 +51,7 @@ set tw=79
 " Indentation
 filetype plugin indent on
 set autoindent
-set smartindent
+"set smartindent
 set smarttab
 set expandtab
 set shiftwidth=3
