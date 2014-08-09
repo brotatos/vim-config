@@ -9,6 +9,11 @@ set nocompatible
 set wrapscan
 set mouse=a
 
+"Ignore directories
+set wildignore+=*venv*
+set wildignore+=*.pyc
+set wildignore+=__pycache__
+
 " Bundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
