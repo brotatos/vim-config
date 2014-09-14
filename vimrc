@@ -27,7 +27,7 @@ Bundle 'dag/vim-fish'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'godlygeek/tabular'
-Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 Bundle 'nanotech/jellybeans.vim'
 
 " Plugin specific settings
