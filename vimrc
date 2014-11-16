@@ -5,6 +5,7 @@ set t_ut=
 
 set guifont=Monospace\ 9
 " Generic
+set confirm "Save on exit.
 set autoread
 set nocompatible
 set wrapscan
