@@ -89,8 +89,7 @@ set pastetoggle=<F5>                  " Copy and paste
 nmap <silent> <F2> g<C-g>             " Word count
 nnoremap <silent> <C-l> :noh<CR><C-l> " Redraw and clear hlsearch.
 nmap <F3> :%s/_\([a-z]\)/\u\1/gc      " camelCase
-nmap <F4> :%s/\s\+$//                 " strip whitespace
-nmap <F6> :%s/\r//g                   " Remove returns.
+nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
 " :retab - fix all old tabs/space errors
 " ^Y scroll buffer up
 " ^E scroll buffer down
