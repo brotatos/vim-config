@@ -94,3 +94,4 @@ nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
 " ^Y scroll buffer up
 " ^E scroll buffer down
 " :sh to go to shell; ^D to go back
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
