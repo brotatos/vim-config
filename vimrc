@@ -78,6 +78,9 @@ set visualbell
 set number
 set ruler
 
+" Set the shell.
+set shell=fish
+
 " Search
 set ignorecase
 set hlsearch
