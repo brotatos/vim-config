@@ -1,5 +1,5 @@
 if &shell =~# 'fish$'
-    set shell=sh
+    set shell=bash
 endif
 set t_ut=
 
@@ -77,9 +77,6 @@ set wildmenu
 set visualbell
 set number
 set ruler
-
-" Set the shell.
-set shell=fish
 
 " Search
 set ignorecase
