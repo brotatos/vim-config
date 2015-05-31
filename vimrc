@@ -33,6 +33,7 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Plugin specific settings
 let g:ctrlp_use_caching = 1
+let g:ctrlp_custom_ignore = '\.o\|\.d'
 "let g:hybrid_use_Xresources = 1
 
 " Encoding
