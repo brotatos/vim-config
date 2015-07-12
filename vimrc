@@ -20,6 +20,7 @@ set wildignore+=__pycache__
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'scrooloose/nerdtree'
 Bundle 'python.vim'
 Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
@@ -97,3 +98,5 @@ nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
 " :sh to go to shell; ^D to go back
 " gg=G reset tab settings
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+" Toggle nerdtree.
+nnoremap <C-n> :NERDTreeToggle<CR>
