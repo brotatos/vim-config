@@ -4,7 +4,7 @@ files=('vimrc' 'vim')
 git submodule init && git submodule update
 
 cd vim/bundle/vundle
-git pull origin master
+git checkout master && git pull
 cd -
 
 for i in "${files[@]}"; do
