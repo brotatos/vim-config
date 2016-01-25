@@ -16,21 +16,24 @@ set wildignore+=*venv*
 set wildignore+=*.pyc
 set wildignore+=__pycache__
 
-" Bundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'scrooloose/nerdtree'
-Bundle 'python.vim'
-Bundle 'gmarik/vundle'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'dag/vim-fish'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'godlygeek/tabular'
-Bundle 'bling/vim-airline'
-Bundle 'nanotech/jellybeans.vim'
+" Plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'python.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'w0ng/vim-hybrid'
+Plug 'dag/vim-fish'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'bling/vim-airline'
+Plug 'nanotech/jellybeans.vim'
+call plug#end()
 
 " Plugin specific settings
 let g:ctrlp_use_caching = 1
