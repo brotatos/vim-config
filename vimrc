@@ -1,3 +1,6 @@
+set foldmethod=indent
+set foldnestmax=10
+
 if &shell =~# 'fish$'
     set shell=bash
 endif
@@ -23,6 +26,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+Plug 'TagHighlight'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'mfukar/robotframework-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'python.vim'
 Plug 'airblade/vim-gitgutter'
@@ -31,14 +38,15 @@ Plug 'dag/vim-fish'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown'
 Plug 'godlygeek/tabular'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " Plugin specific settings
 let g:ctrlp_use_caching = 1
-let g:ctrlp_custom_ignore = '\.o\|\.d'
-"let g:hybrid_use_Xresources = 1
+let g:ctrlp_custom_ignore = '\.o\|\.d\|\.pyc'
+let g:jellybeans_use_term_background_color = 1
 
 " Encoding
 scriptencoding utf-8
