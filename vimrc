@@ -25,8 +25,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'TagHighlight'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'wlangstroth/vim-racket'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'mfukar/robotframework-vim'
@@ -44,6 +47,10 @@ Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " Plugin specific settings
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = '\.o\|\.d\|\.pyc'
 let g:jellybeans_use_term_background_color = 1
