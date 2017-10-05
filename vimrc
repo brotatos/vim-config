@@ -27,14 +27,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'TagHighlight'
+Plug 'vim-scripts/TagHighlight'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'mfukar/robotframework-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'python.vim'
+Plug 'vim-scripts/python.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0ng/vim-hybrid'
 Plug 'dag/vim-fish'
@@ -51,9 +51,12 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_use_caching = 1
-let g:ctrlp_custom_ignore = '\.o\|\.d\|\.pyc'
-let g:jellybeans_use_term_background_color = 1
+let g:ctrlp_custom_ignore = {
+   \ 'dir': '\v[\/]\.(git|hg|svn)$',
+   \ 'file': '\.o\|\.d\|\.pyc\|\v\.(exe|so|dll)$',
+   \ }
 
 " Encoding
 scriptencoding utf-8
