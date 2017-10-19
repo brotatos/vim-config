@@ -1,3 +1,8 @@
+if ! exists('g:TagHighlightSettings')
+  let g:TagHighlightSettings = {}
+endif
+let g:TagHighlightSettings['ForcedPythonVariant'] = 'if_pyth'
+let g:TagHighlightSettings['CtagsExecutable'] = 'ctags'
 set foldmethod=indent
 set foldnestmax=10
 
@@ -15,9 +20,7 @@ set wrapscan
 set mouse=a
 
 "Ignore directories
-set wildignore+=*venv*
-set wildignore+=*.pyc
-set wildignore+=__pycache__
+set wildignore+=*venv*,*.pyc,__pycache__,*.swp,*.so,*.zip
 
 " Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -27,14 +30,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/TagHighlight'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'mfukar/robotframework-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/python.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0ng/vim-hybrid'
 Plug 'dag/vim-fish'
@@ -44,6 +47,9 @@ Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'nanotech/jellybeans.vim'
+Plug 'vim-scripts/TagHighlight'
+Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/python.vim'
 call plug#end()
 
 " Plugin specific settings
@@ -51,11 +57,12 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = {
    \ 'dir': '\v[\/]\.(git|hg|svn)$',
-   \ 'file': '\.o\|\.d\|\.pyc\|\v\.(exe|so|dll)$',
+   \ 'file': 'build\|tags\|\.class\|\.o\|\.d\|\.pyc\|\v\.(exe|so|dll)$',
    \ }
 
 " Encoding
@@ -120,4 +127,6 @@ nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
 " gg=G reset tab settings
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 " Toggle nerdtree.
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR> :set number<CR> <cl>
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>p :CtrlP<cr>
