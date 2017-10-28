@@ -127,6 +127,6 @@ nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
 " gg=G reset tab settings
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 " Toggle nerdtree.
-nnoremap <leader>n :NERDTreeToggle<CR> :set number<CR> <cl>
+nnoremap <leader><space> :NERDTreeToggle<CR> :set number<CR> <cl>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>p :CtrlP<cr>
