@@ -120,13 +120,18 @@ nmap <silent> <F2> g<C-g>             " Word count
 nnoremap <silent> <C-l> :noh<CR><C-l> " Redraw and clear hlsearch.
 nmap <F3> :%s/_\([a-z]\)/\u\1/gc      " camelCase
 nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
-" :retab - fix all old tabs/space errors
-" ^Y scroll buffer up
-" ^E scroll buffer down
-" :sh to go to shell; ^D to go back
-" gg=G reset tab settings
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 " Toggle nerdtree.
 nnoremap <leader><space> :NERDTreeToggle<CR> :set number<CR> <cl>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>p :CtrlP<cr>
+
+" fugitive git bindings
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gc :Gcommit<CR>
+nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>gg :Ggrep<Space>
+nnoremap <space>gb :Git branch<Space>
+nnoremap <space>go :Git checkout<Space>
+nnoremap <space>gpu :Gpush<CR>
+nnoremap <space>gpl :Gpull<CR>
