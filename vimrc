@@ -1,8 +1,3 @@
-if ! exists('g:TagHighlightSettings')
-  let g:TagHighlightSettings = {}
-endif
-let g:TagHighlightSettings['ForcedPythonVariant'] = 'if_pyth'
-let g:TagHighlightSettings['CtagsExecutable'] = 'ctags'
 set foldmethod=indent
 set foldnestmax=10
 
@@ -21,6 +16,10 @@ set mouse=a
 
 "Ignore directories
 set wildignore+=*venv*,*.pyc,__pycache__,*.swp,*.so,*.zip
+
+" Backups
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 " Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -114,19 +113,30 @@ set hlsearch
 set smartcase
 set incsearch
 
-" Commands
-set pastetoggle=<F5>                  " Copy and paste
-nmap <silent> <F2> g<C-g>             " Word count
-nnoremap <silent> <C-l> :noh<CR><C-l> " Redraw and clear hlsearch.
-nmap <F3> :%s/_\([a-z]\)/\u\1/gc      " camelCase
-nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g   " Strip whitespace, returns and ⤶.
+" Autocmds
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
-" Toggle nerdtree.
+" Remove trailing whitespace on save.
+autocmd BufWritePre * %s/\s\+$//e
+
+" Binds
+" Copy and paste
+set pastetoggle=<F5>
+" Word count
+nmap <silent> <F2> g<C-g>
+" Redraw and clear highlights.
+nnoremap <silent> <C-l> :noh<CR><C-l>
+" Underscores to camelCase.
+nmap <F3> :%s/_\([a-z]\)/\u\1/gc
+" Strip trailing whitespace, returns and .
+nmap <F4> :%s/\s\+$\\|\r\\|\%u2936//g
 nnoremap <leader><space> :NERDTreeToggle<CR> :set number<CR> <cl>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>u :UpdateTypesFile<cr>
+" Reload file using \r.
+nnoremap <leader>r :e<cr>
 
-" fugitive git bindings
+" Fugitive git bindings.
 nnoremap <space>gs :Gstatus<CR>
 nnoremap <space>gc :Gcommit<CR>
 nnoremap <space>gd :Gdiff<CR>
