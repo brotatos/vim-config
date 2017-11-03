@@ -1,9 +1,13 @@
+" Fold based off indent with 10 max inner folds.
 set foldmethod=indent
 set foldnestmax=10
 
 if &shell =~# 'fish$'
     set shell=bash
 endif
+
+" Disable Background Color Erase (BCE) so that color schemes work
+" properly within 256-color terminals
 set t_ut=
 
 set guifont=Monospace\ 9
@@ -46,7 +50,7 @@ Plug 'godlygeek/tabular'
 Plug 'ompugao/vim-airline-datetime'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
-Plug 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/TagHighlight'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/python.vim'
@@ -57,6 +61,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+let g:solarized_termcolors=256
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = {
@@ -72,7 +77,7 @@ set encoding=utf-8
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme jellybeans
+colorscheme solarized
 set modelines=5
 set title
 set wrap
