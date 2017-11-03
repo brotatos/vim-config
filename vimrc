@@ -43,6 +43,7 @@ Plug 'dag/vim-fish'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown'
 Plug 'godlygeek/tabular'
+Plug 'ompugao/vim-airline-datetime'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'nanotech/jellybeans.vim'
@@ -56,7 +57,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-"let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = {
@@ -140,6 +140,7 @@ nnoremap <leader>r :e<cr>
 nnoremap <space>gs :Gstatus<CR>
 nnoremap <space>gc :Gcommit<CR>
 nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>gD :vsplit<CR> :Git! diff --staged<CR>
 nnoremap <space>gg :Ggrep<Space>
 nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
