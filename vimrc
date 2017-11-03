@@ -33,9 +33,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'
+Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'wlangstroth/vim-racket'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'hynek/vim-python-pep8-indent'
@@ -46,7 +46,6 @@ Plug 'dag/vim-fish'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown'
 Plug 'godlygeek/tabular'
-Plug 'ompugao/vim-airline-datetime'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
@@ -56,10 +55,7 @@ Plug 'vim-scripts/python.vim'
 call plug#end()
 
 " Plugin specific settings
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+let g:rainbow_active = 1
 let g:solarized_termcolors=256
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
