@@ -35,6 +35,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'luochen1990/rainbow'
 Plug 'wlangstroth/vim-racket'
 Plug 'ludovicchabant/vim-gutentags'
@@ -114,6 +115,7 @@ set smartcase
 set incsearch
 
 " Autocmds
+doautocmd Syntax
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 " Remove trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
