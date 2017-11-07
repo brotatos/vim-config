@@ -74,6 +74,8 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme solarized
+" Make comments gray
+hi Comment ctermfg=gray
 set modelines=5
 set title
 set wrap
