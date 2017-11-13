@@ -33,6 +33,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'Raimondi/delimitMate'
 Plug 'dracula/vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
@@ -73,6 +74,10 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme dracula
+" Fixes for dracula.
+hi link diffRemoved DiffDelete
+hi link diffAdded DiffAdd
+hi link diffChanged DiffChange
 set modelines=5
 set title
 set wrap
@@ -144,7 +149,7 @@ nnoremap <leader>r :e<cr>
 nnoremap <space>gs :Gstatus<CR>
 nnoremap <space>gc :Gcommit<CR>
 nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>gD :vsplit<CR> :Git! diff --staged<CR>
+nnoremap <space>gD :vsplit<CR> <bar> :Git! diff --staged<CR> <bar> :set ft=diff<CR>
 nnoremap <space>gg :Ggrep<Space>
 nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
