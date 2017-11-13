@@ -50,7 +50,7 @@ Plug 'tpope/vim-markdown'
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/TagHighlight'
+Plug 'abudden/taghighlight-automirror'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/python.vim'
 call plug#end()
