@@ -57,6 +57,7 @@ Plug 'vim-scripts/python.vim'
 call plug#end()
 
 " Plugin specific settings
+let g:airline_theme='base16color'
 let g:rainbow_active = 1
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
