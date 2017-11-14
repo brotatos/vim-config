@@ -33,8 +33,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'crusoexia/vim-monokai'
 Plug 'Raimondi/delimitMate'
-Plug 'dracula/vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
@@ -73,11 +73,7 @@ set encoding=utf-8
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme dracula
-" Fixes for dracula.
-hi link diffRemoved DiffDelete
-hi link diffAdded DiffAdd
-hi link diffChanged DiffChange
+colorscheme monokai
 set modelines=5
 set title
 set wrap
