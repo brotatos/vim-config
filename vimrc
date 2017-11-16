@@ -1,6 +1,7 @@
 " Fold based off indent with 10 max inner folds.
 set foldmethod=indent
 set foldnestmax=10
+set foldlevel=1
 
 if &shell =~# 'fish$'
     set shell=bash
@@ -24,6 +25,10 @@ set wildignore+=*venv*,*.pyc,__pycache__,*.swp,*.so,*.zip
 " Backups
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+" Tags
+" Look for a file called tags in the pwd all the way up to root.
+set tags=./tags;/
 
 " Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
