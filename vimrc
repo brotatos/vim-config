@@ -38,7 +38,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'crusoexia/vim-monokai'
+Plug 'nanotech/jellybeans.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
@@ -62,7 +62,6 @@ Plug 'vim-scripts/python.vim'
 call plug#end()
 
 " Plugin specific settings
-let g:airline_theme='base16color'
 let g:rainbow_active = 1
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_use_caching = 1
@@ -79,7 +78,7 @@ set encoding=utf-8
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme monokai
+colorscheme jellybeans
 set modelines=5
 set title
 set wrap
