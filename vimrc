@@ -153,7 +153,7 @@ nnoremap <leader>r :e<cr>
 nnoremap <space>gs :Gstatus<CR>
 nnoremap <space>gc :Gcommit<CR>
 nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>gD :vsplit<CR> <bar> :Git! diff --staged<CR> <bar> :set ft=diff<CR>
+nnoremap <space>gD :vsplit<CR> :Git! diff --staged<CR> :set ft=diff<CR>
 nnoremap <space>gg :Ggrep<Space>
 nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
