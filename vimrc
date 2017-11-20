@@ -1,3 +1,6 @@
+" Allow backspace over auto indents, EOL, and the start of an insert.
+set backspace=indent,eol,start
+
 " Fold based off indent with 10 max inner folds.
 set foldmethod=indent
 set foldnestmax=10
