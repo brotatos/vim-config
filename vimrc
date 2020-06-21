@@ -31,7 +31,7 @@ set directory=~/.vim/backup
 
 " Tags
 " Look for a file called tags in the pwd all the way up to root.
-set tags=./tags;/
+set tags=~/.tags;./tags;/
 
 " Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
